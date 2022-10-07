@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <title>Web Services Project</title>
+  <link rel="stylesheet" href="new.css">
+</head>
+
+<body>
+  <div class="container">
+    <h2>PROJECT- Calculator</h2>
+    <h5>by Simranjeet(2102116), Gurpreet(2044551), Hardik(2102118), Keesara(2001192)</h5>
+    <hr>
+
+    <h3>Calculator</h3>
+    <p>
+      The following form will allow input in first number and second number, then choose options for operator like '+'
+      for addition, '-' for subtraction, '*' for multiplication, '/' for division, '!' for factorial, '^' for power and
+      '%' for modulus, and press calculate.
+
+      <br>To find factorial, enter number in first number, then select '!' and press calculate.
+
+
+    </p>
+
+    <div id="page-wrap">
+      <h1>PHP - Simple Calculator using JSON</h1>
+      <form action="ProjectWS_final.php" method="get">
+        <p>
+          <label for="fname"><b>First Number:</b></label><br>
+          <input type="number" name="first_num" id="first_num" />
+        </p>
+        <p>
+          <label for="fname"><b>Second Number:</b></label><br>
+          <input type="number" name="second_num" id="second_num" />
+        </p>
+
+
+        <p>
+          <label for="fname"><b>Operator:</b></label>
+          <select name="operator">
+            <option value="Add">+</option>
+            <option value="Subtract">-</option>
+            <option value="Multiply">*</option>
+            <option value="Divide">/</option>
+            <option value="Factorial">!</option>
+            <option value="Power">^</option>
+            <option value="Modulus">%</option>
+          </select>
+        </p>
+        <p>
+          <input type="submit" value="Calculate">
+        </p>
+      </form>
+    </div>
+
+    <p>
+      <br><br>
+      <b>OUTPUT as JSON</b><br>
+      The above calculator uses <b>get method</b> to get the input and uses <b>Version2 API </b>, which will give output
+      in JSON format.
+    </p>
+
+    <hr>
+    <section id="page-wrap2">
+      <div>
+        <h1>PHP - Simple Calculator Using XML</h1>
+        <form action="WBXML_final.php" method="get">
+          <p>
+            <label for="fname"><b>First Number:</b></label><br>
+            <input type="number" name="first_num" id="first_num" />
+          </p>
+          <p>
+            <label for="fname"><b>Second Number:</b></label><br>
+            <input type="number" name="second_num" id="second_num" />
+          </p>
+
+          <p>
+            <label for="fname"><b>Operator:</b></label>
+            <select name="operator">
+              <option value="Add">+</option>
+              <option value="Subtract">-</option>
+              <option value="Multiply">*</option>
+              <option value="Divide">/</option>
+              <option value="Factorial">!</option>
+              <option value="Power">^</option>
+              <option value="Modulus">%</option>
+            </select>
+          </p>
+          <p>
+            <input type="submit" value="Calculate">
+          </p>
+        </form>
+      </div>
+    </section>
+    <p>
+      <br><br>
+      <b>OUTPUT as XML</b><br>
+      The above calculator uses <b>get method</b> to get the input and uses <b>Version1 API</b>, which will give output
+      in XML format.
+    </p>
+
+    <hr>
+    <div id="page-wrap">
+      <h1>PHP - Simple Calculator using AJAX</h1>
+      <form method="GET" id="formAjax">
+        <p>
+          <b>First Number</b> <input type="number" name="f_num" id="f_num" required="required" />
+        </p>
+        <p>
+          <b>Second Number</b><input type="number" name="s_num" id="s_num" /> 
+                  </p>
+                  <p>
+                    <b>Result</b> <textarea id="rslt" disabled="true" rows="1" style="resize: none"></textarea>
+                  </p>
+                 
+                   
+                  <label for="operations">Choose any operation:</label>
+                 
+                  <select type="operator" name="operator" id="operator" >
+                     <option value="Add">Add</option>
+                     <option value="Subtract">Subtract</option>
+                     <option value="Multiply">Multiply</option>
+                     <option value="Divide">Divide</option>
+                     <option value="Modulus">Modulus</option>
+                     <option value="Power">Power</option>
+                      <option value="factorial">factorial</option>
+              
+                  </select>
+                  
+                  
+                  <input type="button" onclick="calculationAjax()" value="Submit" />
+                 
+                  </form>                
+                </div>
+                <p>
+                  <br><br>
+                  <b>OUTPUT with the use of AJAX</b><br>
+                  
+                  AJAX is used to connect HTML page from client end to server side where API is deployed through java Script, which can be possible with XMLHttpRequest.
+                  AJAX is used to load the specific content of HTML page instead of loading whole page. Html page does not need server to execute it directly run from web browser. 
+                  So the origin is null. CORS is used to make request to server where the request is originated. To do so we have to add cors to Api which is deployed on server. 
+                  CORS is part of the AJAX engine.
+                <br>
+              <b>Version2 API</b> is used to perfom operations and then ajax loads that data into html page.</p>
+                
+     
+    </div>
+
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   <script src="ajaxnew.js"></script>
+  </body>
+  <!--<script type="text/javascript" src="ajaxnew.js"></script>-->
+</html>
